@@ -1,0 +1,11 @@
+#encoding='utf-8'
+DEEPSORT:
+  REID_CKPT: "deep_sort_pytorch/deep_sort/deep/checkpoint/ckpt_vn.t7"
+  MAX_DIST: 0.2  # 最大匹配距离
+  MIN_CONFIDENCE: 0.3  #检测目标的最小置信度
+  NMS_MAX_OVERLAP: 0.5
+  MAX_IOU_DISTANCE: 0.7   #最大 iou 匹配的阈值，越大越宽松，即与nms的iou相反
+  MAX_AGE: 80   # 删除之前未命中的最大次数。在设定的帧未命中时删除该样本
+  N_INIT: 10  # 轨迹在初始化阶段保持的帧数
+  NN_BUDGET: 200  # 最大保存的匹配上的feture的个数
+  
